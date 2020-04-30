@@ -42,7 +42,7 @@ pdf = matplotlib.backends.backend_pdf.PdfPages("result.pdf")
 # set a while loop for items in key_list until every item is explored
 while i < len(key_list):
     # set figure size to 10inch x 10 inch
-    fig1 = plt.figure(figsize=(10, 7))
+    fig1 = plt.figure(figsize=(12, 10 ))
 
     # set plot_num = ( col row index ) 3 col 2 row 1 index
     plot_num = 321
@@ -88,6 +88,7 @@ while i < len(key_list):
             ax3.plot(data.index, data['3MYoY'])
 
             plt.subplots_adjust(left=0.05, right=0.95, top=0.95, bottom=0.05)
+            plt.tight_layout()
 
             # increment total index number and
             # increment plot_num -> to draw on next position
